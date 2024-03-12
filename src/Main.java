@@ -5,5 +5,6 @@ public class Main {
         Book crimeAndPunishment = new Book("crime And Punishment", 1865, Dostoevsky);
         Book FathersAndSons = new Book("Fathers And Sons", 1862, Turgenev);
         crimeAndPunishment.setYear(1866);
+        System.out.println(crimeAndPunishment.toString());
     }
 }
