@@ -22,11 +22,11 @@ public class Author {
 
     @Override
     public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
+        if (other == null || getClass() != other.getClass()) {
             return false;
         }
         Author c = (Author) other;
-        return lastName.equals(c.lastName);
+        return lastName.equals(c.lastName) && name.equals(c.lastName);
     }
 
     @Override

@@ -33,11 +33,11 @@ public class Book {
 
     @Override
     public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
+        if (other == null || getClass() != other.getClass()) {
             return false;
         }
         Book c = (Book) other;
-        return name.equals(c.name);
+        return name.equals(c.name) && author.equals((c.author));
     }
     @Override
     public int hashCode() {
