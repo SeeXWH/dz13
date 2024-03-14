@@ -15,5 +15,22 @@ public class Author {
         return this.lastName;
     }
 
+    @Override
+    public String toString() {
+        return this.name + ' ' + this.lastName;
+    }
 
+    @Override
+    public boolean equals(Object other) {
+        if (other == null || getClass() != other.getClass()) {
+            return false;
+        }
+        Author c = (Author) other;
+        return lastName.equals(c.lastName) && name.equals(c.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(lastName);
+    }
 }

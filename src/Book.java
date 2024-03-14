@@ -26,4 +26,23 @@ public class Book {
         this.year = year;
     }
 
+    @Override
+    public String toString() {
+        return this.name + ' ' + this.year + ' ' + this.author;
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (other == null || getClass() != other.getClass()) {
+            return false;
+        }
+        Book c = (Book) other;
+        return name.equals(c.name) && author.equals((c.author));
+    }
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(name);
+    }
+
+
 }
